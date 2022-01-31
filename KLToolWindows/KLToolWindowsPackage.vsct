@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="guidKLToolWindowsPackage">
+
+    <Menus>
+      <Menu guid="guidKLToolWindowsPackageCmdSet" id="KLToolWindowsMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS"/>
+        <Strings>
+          <ButtonText>KL Tool Windows</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidKLToolWindowsPackageCmdSet" id="KLToolWindowsMenuGroup" priority="0x0600">
+        <Parent guid="guidKLToolWindowsPackageCmdSet" id="KLToolWindowsMenu" />   
+      </Group>
+    </Groups>
+    
+    <Buttons>
+      <Button guid="guidKLToolWindowsPackageCmdSet" id="WpfToolWindowCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidKLToolWindowsPackageCmdSet" id="KLToolWindowsMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <CommandName>WpfToolWindow</CommandName>
+          <ButtonText>Wpf Tool Window</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\KLCodeExtensionCommand.png" usedList="bmpPic1, bmpPic2, bmpPic3, bmpPic4, bmpPic5, bmpPic6"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidKLToolWindowsPackage" value="{5d0eac76-90b1-45ab-814b-b2e7a1ca7379}" />
+
+    <GuidSymbol name="guidKLToolWindowsPackageCmdSet" value="{7927f498-26bf-4f2e-8d37-458902b754e9}">
+      <IDSymbol name="KLToolWindowsMenuGroup" value="0x1020"/>
+      <IDSymbol name="KLToolWindowsMenu" value="0x1021"/>
+      <IDSymbol name="WpfToolWindowCommandId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{78fdef1e-7a1c-4565-9dad-4aeb0190d343}" >
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPic3" value="3" />
+      <IDSymbol name="bmpPic4" value="4" />
+      <IDSymbol name="bmpPic5" value="5" />
+      <IDSymbol name="bmpPic6" value="6" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
